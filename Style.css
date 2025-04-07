@@ -1,0 +1,335 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Permanent Marker", cursive;
+}
+
+/* Body */
+body {
+    overflow-x: hidden;
+}
+
+/* Main Width */
+.main-width {
+    width: 1400px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(#f9d349, 20%, #d57e12);
+    position: relative;
+    animation: fadeIn 1.5s ease-out;
+}
+.hero .main-width .logo a {
+    font-family: "Hanalei Fill", system-ui;
+}
+.hero .main-width {
+    width: 75%;
+    max-width: 1200px;
+}
+/* Header Styling */
+.hero header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 30px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    flex-wrap: wrap;
+}
+
+.logo h2 a {
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.logo h2 a:hover {
+    transform: scale(1.2);
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    transition: 0.4s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav ul li:not(:last-child) a:hover,
+nav ul li:not(:last-child) a:focus {
+    border-bottom: 3px solid #2F4F4F;
+}
+
+nav ul li.btn a {
+    background: transparent;
+    color: white;
+    border: 2px solid #F5dca8;
+    padding: 9px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+nav ul li.active a {
+    border-bottom: 2px solid white;
+}
+nav ul li.btn:hover a {
+    border: 2px solid white;
+    color: black;
+    background: white;
+    transition: 0.4s;
+}
+
+/* Main Content */
+.content {
+    padding-top: 140px;
+    animation: slideUp 1s ease-out;
+}
+
+.content .main-text {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.content .main-text h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.content .main-text h1{
+    font-size: 90px;
+    line-height: 1;
+    color: white;
+    margin: 0px 0px 45px;
+    font-family:'Permanent Marker', cursive;
+}
+
+.content .main-text p {
+    max-width: 100%;
+    width: 480px;
+    color: white;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content .main-text a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background: white;
+    padding: 9px 25px;
+    margin-right: 100px;
+    line-height: 1.4;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 10px;
+}
+
+.content .main-text a:hover {
+    transform: scale(1.2);
+    background: #f5dca8;
+    color: white;
+}
+
+.content .main-text a.cta {
+    border: 1px solid #f5dca8;
+    color: white;
+    background: transparent;
+    margin-left: 20px;
+}
+
+.content .main-text a.cta i {
+    margin-right: 12px;
+}
+
+.content .main-text a.cta:hover {
+    color: black;
+    background: white;
+    border: 1px solid white;
+}
+
+/* Social Icons */
+.content .social {
+    position: relative;
+    z-index: 2;
+    margin-top: 200px;
+    padding-bottom: 40px;
+    animation: fadeInUp 1.5s ease-out forwards;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.content .social a {
+    display: inline-block;
+    color: #f5dcac;
+    font-size: 25px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.content .social a:hover {
+    transform: scale(1.2);
+    color: white;
+}
+
+/* Image Section */
+.image {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    animation: slideInRight 1s ease-out;
+}
+
+.image img {
+    width: 67%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* === Media Queries for RWD === */
+
+/* Large Screens (PCs) */
+@media (min-width: 1200px) {
+    .content .main-text h1 {
+        font-size: 120px;
+    }
+    nav ul li {
+        margin-left: 80px;
+    }
+}
+
+/* Laptops & Tablets */
+@media (max-width: 1080px) and (min-width: 1920px) {
+    .logo h2 a {
+        font-size: 30px;
+    }
+    nav ul li {
+        margin: 20px ;
+        margin-left: 0px;
+    }
+    .content .main-text h1 {
+        font-size: 50px;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 991px) and (min-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .content .main-text h1 {
+        font-size: 60px;
+    }
+    .content .main-text p {
+        width: 90%;
+    }
+    .content .main-text a {
+        padding: 10px 20px;
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 767px) {
+    .logo h2 a {
+        font-size: 24px;
+    }
+    .content .main-text h1 {
+        font-size: 40px;
+    }
+    .content .main-text p {
+        font-size: 14px;
+    }
+    .image img {
+        height: 50vh;
+    }
+    nav ul li {
+        margin-left: 19px;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Extra Small Screens (Very Small Phones) */
+@media (max-width: 480px) {
+    .content .main-text h1 {
+        font-size: 30px;
+    }
+    .content .main-text p {
+        font-size: 12px;
+    }
+    nav ul li {
+        margin-left: 10px;
+    }
+    .content .main-text a {
+        padding: 8px 15px;
+    }
+}
